@@ -7,7 +7,7 @@ using MongoDB.Bson;
 
 namespace EmployeeManagement.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/attendance")]
     [ApiController]
     public class AttendenceController : ControllerBase
     {
@@ -20,29 +20,29 @@ namespace EmployeeManagement.Controllers
             _logService = logService;
         }
 
-        [HttpPost]
+        [HttpPost("add")]
         public async Task<IActionResult> AddAttendance([FromBody] AttendanceEntity attendance)
         {
             if (attendance == null)
                 return BadRequest();
 
-            var id = await _attendanceService.AddAttendanceAsync(attendance);
+             await _attendanceService.AddAttendanceAsync(attendance);
 
             LogEntity logentry = new LogEntity
             {
                 Id = ObjectId.GenerateNewId(),
                 OperationType = "Post",
-                EntityName = "Attendence",
+                EntityName = "Attendence", 
                 EntityId = "Att114",
                 Timestamp = DateTime.UtcNow,
                 OperationDetails = "Added attendene of an employee"
             };
 
             await _logService.LogOperationAsync(logentry);
-            return CreatedAtAction(nameof(GetAttendance), new { id }, attendance);
+            return Ok();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("get/{id}")]
         public async Task<IActionResult> GetAttendance(int id)
         {
             var attendance = await _attendanceService.GetAttendanceAsync(id);
@@ -64,7 +64,7 @@ namespace EmployeeManagement.Controllers
             return Ok(attendance);
         }
 
-        [HttpGet]
+        [HttpGet("getall")]
         public async Task<IActionResult> GetAllAttendance()
         {
             var attendanceList = await _attendanceService.GetAllAttendanceAsync();

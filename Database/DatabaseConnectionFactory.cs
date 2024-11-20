@@ -38,7 +38,7 @@ namespace EmployeeManagement.Database
             }
             else if(db=="pgs"){
 
-                return new NpgsqlConnection(_configuration.PostgreSQLConnection);
+                return new NpgsqlConnection(_configuration.PostgreSQL);
                
 
 

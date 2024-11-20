@@ -87,3 +87,4 @@ C:\Users\TN-99495\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\n
 C:\Users\TN-99495\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\net8.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\TN-99495\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\net8.0\runtimes\win\native\mongocrypt.dll
 C:\Users\TN-99495\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\net8.0\Npgsql.dll
+C:\Users\TN-99495\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\net8.0\EmployeeManagement.sourcelink.json

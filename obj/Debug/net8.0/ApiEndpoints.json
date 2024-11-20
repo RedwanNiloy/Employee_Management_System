@@ -2,7 +2,7 @@
   {
     "ContainingType": "EmployeeManagement.Controllers.AttendenceController",
     "Method": "AddAttendance",
-    "RelativePath": "api/Attendence",
+    "RelativePath": "api/attendance/add",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -17,18 +17,8 @@
   },
   {
     "ContainingType": "EmployeeManagement.Controllers.AttendenceController",
-    "Method": "GetAllAttendance",
-    "RelativePath": "api/Attendence",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "EmployeeManagement.Controllers.AttendenceController",
     "Method": "GetAttendance",
-    "RelativePath": "api/Attendence/{id}",
+    "RelativePath": "api/attendance/get/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -39,6 +29,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EmployeeManagement.Controllers.AttendenceController",
+    "Method": "GetAllAttendance",
+    "RelativePath": "api/attendance/getall",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

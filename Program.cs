@@ -19,6 +19,8 @@ builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddScoped<IDesignationService, DesignationService>();
 builder.Services.AddScoped<IDesignationRepository, DesignationRepository>();
 builder.Services.AddScoped<IDatabaseConnectionFactory, DatabaseConnectionFactory>();
+builder.Services.AddScoped<IAttendenceService, AttendenceService>();
+builder.Services.AddScoped<IAttendenceRepo, AttendenceRepo>();
 builder.Services.AddSingleton<IMongodbConnectionFactory, MongodbConnectionFactory>();
 builder.Services.AddScoped<IOperationlogrepo, OperationLogRepo>();
 builder.Services.AddScoped<ILogService, LogService>();
